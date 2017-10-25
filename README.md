@@ -30,10 +30,10 @@ Example Playbook
 
 Register the role in requirements.yml:
 
-    ```yaml
+```yaml
     - src: capitanh.wildfly-ansible-role
       name: wildfly
-
+```
 Include it in your playbooks:
 
     ```yaml
