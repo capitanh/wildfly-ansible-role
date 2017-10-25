@@ -15,10 +15,12 @@ Role Variables
 The variables that can be passed to this role and a brief description about
 them are as follows:
 
+```yaml
       wildfly_user:       wildfly       # OS User to run the server
       wildfly_basedir:    /opt          # Directory to install the server
       wildfly_home:       /opt/wildfly  # Wildfly home dir
       wildfly_version:    10.1.0.Final  # Software version
+```
 
 Dependencies
 ------------
@@ -36,11 +38,11 @@ Register the role in requirements.yml:
 ```
 Include it in your playbooks:
 
-    ```yaml
+```yaml
     - hosts: servers
       roles:
       - wildfly
-    ```
+```
 
 License
 -------
