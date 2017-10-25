@@ -1,0 +1,6 @@
+---
+- name: Start wildfly service
+  service:
+    name: wildfly
+    enabled: yes
+    state: started

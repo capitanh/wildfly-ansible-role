@@ -1,0 +1,13 @@
+[Unit]
+Description=WildFly application server
+After=network.target
+
+[Service]
+Type=simple
+Environment=JAVA={{jdk_basedir}}/{{jdk_version}}/bin/java
+User=wildfly
+Group=wildfly
+ExecStart={{wildfly_home}}/bin/standalone.sh
+
+[Install]
+WantedBy=multi-user.target
