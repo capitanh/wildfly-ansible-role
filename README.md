@@ -20,6 +20,8 @@ them are as follows:
     wildfly_basedir:    /opt          # Directory to install the server
     wildfly_home:       /opt/wildfly  # Wildfly home dir
     wildfly_version:    10.1.0.Final  # Software version
+    wildfly_admin:      admin         # Management console admin user
+    wildfly_password:   admin         # Management console admin password
 ```
 
 Dependencies

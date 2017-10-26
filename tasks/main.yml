@@ -55,6 +55,18 @@
     state: link
     mode: 0777
 
+- name: Copy management console user configuration
+  template:
+    src: "{{item}}"
+    dest: "{{wildfly_home}}/standalone/configuration"
+    owner: "{{wildfly_user}}"
+    group: "{{wildfly_user}}"
+    mode: 0644
+  with_items:
+    - mgmt-users.properties
+    - mgmt-groups.properties
+
+
 - name: Copy control script
   template:
     src: launch.sh
