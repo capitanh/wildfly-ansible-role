@@ -5,6 +5,15 @@
     state: installed
   with_items:
     - unzip
+  when: ansible_os_family == 'Debian'
+
+- name: Install required packages
+  yum:
+    name: "{{item}}"
+    state: installed
+  with_items:
+    - unzip
+  when: ansible_os_family == 'RedHat'  
 
 - name: Create wildfly user
   user:
