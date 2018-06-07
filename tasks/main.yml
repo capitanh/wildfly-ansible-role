@@ -38,17 +38,25 @@
     owner: "{{wildfly_user}}"
     group: "{{wildfly_user}}"
 
-- name: Make sure config dir exists
-  file:
-    path: /etc/wildfly
-    state: directory
+#- name: Make sure config dir exists
+#  file:
+#    path: /etc/wildfly
+#    state: directory
+#    owner: "{{wildfly_user}}"
+#    group: "{{wildfly_user}}"
+
+#- name: Copy confif file
+#  copy:
+#    src: wildfly.conf
+#    dest: /etc/wildfly/wildfly.conf
+#    mode: 0644
+
+- name: Overwrite standalone config
+  copy:
+    src: standalone.xml
+    dest: "{{wildfly_home}}/standalone/configuration"
     owner: "{{wildfly_user}}"
     group: "{{wildfly_user}}"
-
-- name: Copy confif file
-  copy:
-    src: wildfly.conf
-    dest: /etc/wildfly/wildfly.conf
     mode: 0644
 
 - name: Copy service script
