@@ -1,5 +1,8 @@
 ---
 - include_tasks: "{{ansible_os_family}}.yml"
+- name: Disable SELinux
+  selinux:
+    state: disabled
 
 - name: Create wildfly user
   user:
