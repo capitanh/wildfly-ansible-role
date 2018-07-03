@@ -1,0 +1,6 @@
+- name: Install required packages
+  yum:
+    name: "{{item}}"
+    state: present
+  with_items:
+    - unzip
