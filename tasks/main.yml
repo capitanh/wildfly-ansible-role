@@ -28,13 +28,13 @@
     owner: "{{wildfly_user}}"
     group: "{{wildfly_user}}"
 
-#- name: Overwrite standalone config
-#  template:
-#    src: standalone.xml
-#    dest: "{{wildfly_home}}/standalone/configuration"
-#    owner: "{{wildfly_user}}"
-#    group: "{{wildfly_user}}"
-#    mode: 0644
+- name: Overwrite standalone config
+  template:
+    src: standalone.xml
+    dest: "{{wildfly_home}}/standalone/configuration"
+    owner: "{{wildfly_user}}"
+    group: "{{wildfly_user}}"
+    mode: 0644
 
 - name: Copy service script
   template:
